@@ -11,7 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 // ROUTES
-app.use('/', () => {console.log('Hello world')});
+//app.use('/', () => {console.log('Hello world')});
+app.use('/api/home', require('./routes/home'));
 /* 
 app.use('/api/login', require('./routes/login'));
 app.use('/api/register', require('./routes/register'));
