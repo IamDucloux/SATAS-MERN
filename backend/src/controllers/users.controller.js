@@ -14,6 +14,19 @@ userController.getUsers = async (req, res) => {
     }
 };
 
+userController.getUser = async (req, res) => {
+    try {
+        const user = await User.findById(req.params.id);
+        res.json(user);
+        
+    } catch (err) {
+        res.status(400).json({
+            error: err
+        });
+        
+    }
+};
+
 userController.createUser = async (req, res) => {
     try {
         const { name } = req.body;
@@ -26,6 +39,23 @@ userController.createUser = async (req, res) => {
         res.json('User created');
     } catch (e) {
         console.log(e)
+        res.json(e.errmsg);
+    }
+};
+
+userController.updateUser = async (req, res) => {
+    try {
+        const { name, lastname, email, password } = req.body;
+        await User.findByIdAndUpdate(req.params.id, {
+            name,
+            lastname,
+            email,
+            password
+
+        });
+        res.json('User Updated')
+    } catch (e) {
+        console.log(e);
         res.json(e.errmsg);
     }
 };
