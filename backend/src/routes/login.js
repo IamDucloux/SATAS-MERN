@@ -1,16 +1,19 @@
-const { Router } = require('express');
+const { Router, request } = require('express');
 const router = Router();
 
-//const { getNotes, createNote, getNote, deleteNote, updateNote } = require('../controllers/notes.controller');
-
+const { authUser } = require('../controllers/users.controller');
 /* 
 router.route('/')
     .get()
     .post(); */
 
-router.route('/:id')
+/* router.route('/:id')
     .get()
     .delete()
-    .put();
+    .put(); */
+
+router.route('/')
+    .get()
+    .post( authUser );
 
 module.exports = router;

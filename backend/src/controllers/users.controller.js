@@ -18,12 +18,12 @@ userController.getUser = async (req, res) => {
     try {
         const user = await User.findById(req.params.id);
         res.json(user);
-        
+
     } catch (err) {
         res.status(400).json({
             error: err
         });
-        
+
     }
 };
 
@@ -64,6 +64,22 @@ userController.deleteUser = async (req, res) => {
     const { id } = req.params;
     await User.findByIdAndDelete(id);
     res.json('User deleted');
+}
+
+userController.authUser = async (req, res) => {
+
+    try {
+        const { email } = req.params;
+        const { password } = req.params;
+        const user = await User.findOne({ email: email });
+        //THIS IS A BAD PRACTICE AND MUST BE REPLACED IN A UPCOMING UPDATE --ID 03/JUL/2020
+        user.password == password ? res.json('Credentials are good') : res.json('Credentials didnt work');
+    } catch (error) {
+        console.log(error);
+        res.json(error);
+    }
+
+
 }
 
 module.exports = userController;

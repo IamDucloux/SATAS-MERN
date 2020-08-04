@@ -1,7 +1,6 @@
 const productController = {};
-
 const Product = require('../models/product.model');
-const userController = require('./users.controller');
+
 
 productController.createProduct = async (req, res) => {
 
