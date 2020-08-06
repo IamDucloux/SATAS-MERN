@@ -6,7 +6,7 @@ export default class Navigation extends Component{
         return(
             <nav className='navbar'>
                 <div className='container-app-name'>
-                    <Link className='nav-app-name' to='/'>SATAS</Link>
+                    <Link className='nav-app-name' to='/'><h1>SATAS</h1></Link>
                 </div>
             </nav>
         )

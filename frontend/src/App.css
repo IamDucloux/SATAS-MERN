@@ -1,1 +1,24 @@
+body{
+  margin: 0;
+  background-image: url('./Supermarket-stands-filled-with-goods.png');
+}
 
+#root{
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+}
+.navbar{
+  background-color: #000000;
+  grid-column-start: 1;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.navbar h1{
+  margin: 0;
+  margin-left: 12px;
+  font-size: 4rem;
+  color: orange;
+}
