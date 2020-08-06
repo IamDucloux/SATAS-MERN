@@ -1,6 +1,17 @@
+:root{
+  --main-color: orange; /*THIS IS THE PLACEHOLDER FOR THE COLOR*/
+  --main-ligth-color: #cccccc; /*THIS IS THE PLACEHOLDER FOR THE COLOR*/
+  --main-dark-color: #dddddd; /*THIS IS THE PLACEHOLDER FOR THE COLOR*/
+  --secondary-color: #bbbbbb; /*THIS IS THE PLACEHOLDER FOR THE COLOR*/
+  --secondary-ligth-color: #ffffff; /*THIS IS THE PLACEHOLDER FOR THE COLOR*/
+  --secondary-dark-color: #ffffff; /*THIS IS THE PLACEHOLDER FOR THE COLOR*/
+}
+
 body{
   margin: 0;
   background-image: url('./Supermarket-stands-filled-with-goods.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #root{
@@ -8,17 +19,36 @@ body{
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
 }
+
 .navbar{
   background-color: #000000;
   grid-column-start: 1;
   grid-column-end: 11;
   grid-row-start: 1;
   grid-row-end: 2;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar h1{
   margin: 0;
+
+}
+
+.nav-app-name{
+  margin: 0;
   margin-left: 12px;
   font-size: 4rem;
-  color: orange;
+  color: var(--main-color);
+  order: 0;
+}
+
+.nav-login{
+  color: white;
+  order: 2;
+  margin-right: 10px;
 }
