@@ -8,7 +8,7 @@ export default class info extends Component {
                 <p>
                     <strong>WELCOME</strong><br/>
                     This is an early version of the app, and was developed under the objetive of learn the
-                    <strong>MERN 🔥</strong> stack.
+                    <strong> MERN <span role='img'>🔥</span></strong> stack.
 
                 </p>
             </div>
