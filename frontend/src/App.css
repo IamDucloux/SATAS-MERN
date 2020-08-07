@@ -48,7 +48,7 @@ body{
 .nav-app-name{
   margin: 0;
   margin-left: 12px;
-  font-size: 4rem;
+  font-size: 2rem;
   color: var(--main-color);
   order: 0;
 }
@@ -57,4 +57,22 @@ body{
   color: var(--Primary-font-color);
   order: 2;
   margin-right: 10px;
+}
+
+.info-container{
+  background-image: linear-gradient(var(--secondary-dark-color), black);
+  grid-row-start: 3;
+  grid-row-end: auto;
+  grid-column-start: 4;
+  grid-column-end: 8;
+  color: var(--Primary-font-color);
+}
+
+.info-container h2{
+  margin: 15px;
+}
+
+.info-container p{
+  margin: 15px;
+  font-family: 'Open Sans', sans-serif;
 }
