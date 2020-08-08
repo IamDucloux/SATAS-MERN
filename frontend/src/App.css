@@ -1,4 +1,4 @@
-:root{
+  :root{
   --main-color: #D84315;
   --main-ligth-color: #FF7543;
   --main-dark-color: #9F0000;
@@ -64,12 +64,23 @@ body{
   font-size: 2rem;
   color: var(--main-color);
   order: 0;
+  text-decoration-color: #fff;
 }
 
 .nav-login{
   color: var(--Primary-font-color);
   order: 2;
   margin-right: 10px;
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+.nav-login:hover{
+  color: var(--main-color);
+  font-size: 1.4em;
+  text-decoration: underline;
+  text-decoration-color: var(main-ligth-color);
+  text-decoration-style: double;
 }
 
 .info-container{
