@@ -8,7 +8,7 @@ export default class Navigation extends Component{
 
                 <Link className='nav-app-name' to='/'><h1>SATAS</h1></Link>
 
-                <Link className='nav-login' to='/'>Login</Link>
+                <Link className='nav-login' to='/login'>Login</Link>
             </nav>
         )
     }

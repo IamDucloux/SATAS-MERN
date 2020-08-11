@@ -4,14 +4,16 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Navigation from './components/navigation'
 import Info from './components/info'
-  
+import Login from './components/login'
+
 function App() {
   return (
     <Router>
       <Navigation />
-      <Info />
+      <Route path="/" exact component={Info} />
+      <Route path="/login" component={Login} />
     </Router>
-    
+
   );
 }
 
