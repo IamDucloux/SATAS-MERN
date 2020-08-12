@@ -8,12 +8,22 @@ export default class info extends Component {
 
     state = {
         email: '',
-        password: ''
+        password: '',
+        users: []
+    }
+
+    async componentDidMount() {
+        const res = await axios.get('http://localhost/4000/api/users');
+        if (res.data.length > 0) {
+            this.setState({
+                users: res.data.map(user => user.email)
+            })
+        }
     }
 
     onSubmit = async (obj) =>{
         obj.preventDefault();
-        
+
     }
 
 
