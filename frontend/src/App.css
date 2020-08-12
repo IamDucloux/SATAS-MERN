@@ -104,3 +104,77 @@ body{
   margin: 15px;
   font-family: 'Open Sans', sans-serif;
 }
+
+.login-container{
+  margin-top: 18%;
+  background-color: var(--secondary-dark-color);
+  color: var(--Primary-font-color);
+  align-self: center;
+  grid-row-start: 5;
+  grid-row-end: 10;
+  grid-column-start: 4;
+  grid-column-end: 8;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-container *{
+  margin: 10px;
+  
+}
+
+.login-container h2{
+  order: 0;
+  align-self: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+input {
+  max-width: 35%;
+  height: 25px;
+  border-radius: 7px;
+  margin: 0, 50%, 0, 50%;
+  align-self: center;
+}
+
+.login-label{
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  align-self: center;
+}
+
+#email-label {
+  order: 1;
+  
+}
+
+#email {
+  order: 2;
+}
+
+#password-label {
+  order: 3;
+}
+
+#password {
+  order: 4;
+}
+
+button {
+  order: 5;
+  background-color: var(--main-color);
+  color: var(--Primary-font-color);
+  font-size: 1.3em;
+  font-weight: bold;
+  height: 50px;
+  border-radius: 7px;
+  width: 50%;
+  align-self: center;
+  
+}

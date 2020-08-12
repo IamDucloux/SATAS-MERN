@@ -13,6 +13,7 @@ export default class info extends Component {
 
     onSubmit = async (obj) =>{
         obj.preventDefault();
+        
     }
 
 
@@ -20,11 +21,11 @@ export default class info extends Component {
         return (
             
             <div className='login-container'>
-              <h3>LOGIN</h3>
+              <h2>LOGIN</h2>
               <form onSubmit={this.onSubmit}>
-                  <label for="email">Email:</label>
+                  <label className="login-label" id="email-label" for="email">Email:</label>
                   <input type="email" id="email" size="30" required />
-                  <label for="password">Password:</label>
+                  <label className="login-label" id="password-label" for="password">Password:</label>
                   <input type="password" id="password" required />
                   <button className="form-button">
                       Login
