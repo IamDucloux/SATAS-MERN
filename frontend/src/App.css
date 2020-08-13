@@ -67,6 +67,34 @@ body{
   text-decoration-color: #fff;
 }
 
+.nav-dashboard{
+  display: none;
+  color: var(--Primary-font-color);
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+.nav-orders{
+  display: none;
+  color: var(--Primary-font-color);
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+.nav-users{
+  display: none;
+  color: var(--Primary-font-color);
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
+.nav-logout{
+  display: none;
+  color: var(--Primary-font-color);
+  font-size: 1.3em;
+  text-decoration: none;
+}
+
 .nav-login{
   color: var(--Primary-font-color);
   order: 2;
@@ -165,7 +193,6 @@ input {
 #password {
   order: 4;
 }
-
 button {
   order: 5;
   background-color: var(--main-color);
