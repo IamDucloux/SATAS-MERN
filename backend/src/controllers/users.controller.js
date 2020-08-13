@@ -1,4 +1,5 @@
 const userController = {};
+const jwt = require('jsonwebtoken');
 
 const User = require('../models/user.model');
 
@@ -68,17 +69,44 @@ userController.deleteUser = async (req, res) => {
 
 userController.authUser = async (req, res) => {
 
-    try {
-        const { email } = req.params;
-        const { password } = req.params;
-        const user = await User.findOne({ email: email });
-        //THIS IS A BAD PRACTICE AND MUST BE REPLACED IN A UPCOMING UPDATE --ID 03/JUL/2020
-        user.password == password ? res.json('Credentials are good') : res.json('Credentials didnt work');
-    } catch (error) {
-        console.log(error);
-        res.json(error);
-    }
-
+    let body = req.body;
+    User.findOne({ email: body.email }, (err, usuarioDB)=>{
+        if (err) {
+          return res.status(500).json({
+             ok: false,
+             err: err
+          })
+       }
+   // Verifica que exista un usuario con el mail escrita por el usuario.
+      if (!usuarioDB) {
+         return res.status(400).json({
+           ok: false,
+           err: {
+               message: "Usuario o contraseña incorrectos"
+           }
+        })
+      }
+   // Valida que la contraseña escrita por el usuario, sea la almacenada en la db
+      if (! body.password == usuarioDB.password){
+         return res.status(400).json({
+            ok: false,
+            err: {
+              message: "Usuario o contraseña incorrectos"
+            }
+         });
+      }
+   // Genera el token de autenticación
+       let token = jwt.sign({
+              usuario: usuarioDB,
+           }, 'DEV-SEED', {
+           expiresIn: '48h'
+       })
+       res.json({
+           ok: true,
+           usuario: usuarioDB,
+           token,
+       })
+   })
 
 }
 
