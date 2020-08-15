@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Order from './order'
 
 
 export default class createOrder extends Component {
@@ -9,12 +10,12 @@ export default class createOrder extends Component {
                     <h2>CREATE ORDER</h2>
                     <div className="c-order">
                         <form>
-                            <label>campo1</label>
+                            <label>Order Number</label>
                             <input type="text"></input>
-                            <label>campo1</label>
+                            <label>Product</label>
                             <input type="text"></input>
-                            <label>campo1</label>
-                            <input type="text"></input>
+                            <label>Observations</label>
+                            <input type="text-area"></input>
                         </form>
                     </div>
 
@@ -22,7 +23,20 @@ export default class createOrder extends Component {
                 <div className="show-orders">
                     <h2>ORDERS</h2>
                     <div className="orders">
-
+                        <ul>
+                            <li>
+                                <Order></Order>
+                            </li>
+                            <li>
+                                <Order></Order>
+                            </li>
+                            <li>
+                                <Order></Order>
+                            </li>
+                            <li>
+                                <Order></Order>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

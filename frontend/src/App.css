@@ -354,8 +354,15 @@ button {
 }
 
 .create-order form{
+  width: 100%;
   margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-items: stretch;
+  align-items: center;
 }
+
+
 
 .show-orders{
   margin-top: 10px;
@@ -377,7 +384,7 @@ button {
 }
 
 .c-order{
-  height: 100%;
+  height: 500px;
   background-color: var(--secondary-ligth-color);
   border-radius: 10px;
   margin-left: 10px;
@@ -387,4 +394,8 @@ button {
 
 .orders{
   background-color: var(--secondary-ligth-color);
+}
+
+li{
+  margin: 10px;
 }
